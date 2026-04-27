@@ -1,5 +1,3 @@
-
-
 FROM php:8.2-apache
 
 
@@ -15,8 +13,8 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html
 
 
-COPY . /var/www/html/
-COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY . /var/www/html
 RUN composer install --no-dev --optimize-autoloader || true
 RUN chown -R www-data:www-data /var/www/html
 EXPOSE 80

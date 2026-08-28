@@ -1,0 +1,8 @@
+.env
+index.php
+docker-compose.yml
+meta.php
+main.py
+verify.py
+utils.py
+python/

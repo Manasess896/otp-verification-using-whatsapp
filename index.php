@@ -76,8 +76,8 @@ if (isset($_POST['action'])) {
           "to" => $userPhone,
           "type" => "template",
           "template" => [
-            "name" => "otp",//this is the name that appears in the whatsapp template dashboard if wrong it will bring the template does not exsist error
-            "language" => ["code" => "en_AE"], // here you entered the lunguage you choose for the template if wrong it will bring translation error
+            "name" => "otp1",//this is the name that appears in the whatsapp template dashboard if wrong it will bring the template does not exsist error
+            "language" => ["code" => "en_US"], // here you entered the lunguage you choose for the template if wrong it will bring translation error
             "components" => [
               ["type" => "body", "parameters" => [["type" => "text", "text" => (string)$otp]]],
               ["type" => "button", "sub_type" => "url", "index" => 0, "parameters" => [["type" => "text", "text" => (string)$otp]]]
